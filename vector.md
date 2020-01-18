@@ -1,9 +1,11 @@
 # constructor
 ## vector<data type> varname;
 ### ex) vector<int> v;
+#### varname 을 가진 data type의 vector 를 만들어줌
     
 ## vector<data type> varname({iterator});
 ### ex) vector<data type> varname({1,2,3});
+#### 
 
 ## vector<data type> varname(size);
 ### ex) vector<int> v(5);
@@ -31,4 +33,15 @@
     vector<int>({ 0, 1, 2 }),
     vector<int>({ 3, 7, 9, 11 })
     });
+
+# member function
+## v.assign(N,init num);
+### ex) v.assing(5,2);
+#### init num의 값으로 N개의 원소 할당
+
+## v.at(idx);
+### idx번째 원소를 참조함 
+### v[idx] 보다 속도는 느리지만 범위를 점검함
+
+## v.front
 
