@@ -1,7 +1,7 @@
 # 1. constructor
 * vector<data type> varname;
-- ex) vector<int> v;
-- varname 을 가진 data type의 vector 를 만들어줌
+    - ex) vector<int> v;
+    - varname 을 가진 data type의 vector 를 만들어줌
     
 ## 1.2 vector<data type> varname({iterator});
 ex) vector<data type> varname({1,2,3});
