@@ -31,13 +31,12 @@
     vector<datatype> ({iterator})
     });
 ~~~cpp
-	
         vector<vector<int> > arr({
         vector<int>({ 0, 1, 2 }),
         vector<int>({ 3, 7, 9, 11 })
         });
 ~~~
-        - 각각의 iterator 로 이루어진 2차원배열을생성
+    - 각각의 iterator 로 이루어진 2차원배열을생성
 
 # 3. member function
 * v.assign(N,init num);
