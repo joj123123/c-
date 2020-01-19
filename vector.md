@@ -30,6 +30,7 @@
     vector<datatype> ({iterator}),
     vector<datatype> ({iterator})
     });
+	- 각각의 iterator 로 이루어진 2차원배열을생성
 ~~~cpp
         vector<vector<int> > arr({
         vector<int>({ 0, 1, 2 }),
