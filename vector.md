@@ -95,18 +95,18 @@ v.push_back(N) 을 사용할 때는 push_back()함수를 사용할 때마다 메
 그렇게 원소의 개수가 증가할 때마다 메모리를 새로 할당하게 되면 비효율이 발생하기 떄문에
 메모리를 새로 할당할 떄에는 기존 메모리 * 2 의 크기로 capacity가 증가하게 됨
 
-v.insert(iterator,M,num);
+* v.insert(iterator,M,num);
     - v.insert(v.begin()+1, 3, 4);
     - iterator 위치에 M개의 num값을 삽입함
     - 삽입한 곳의 iterator을 반환함
     - 벡터는 삽입을 할 경우 
-v.erase(iterator);
+* v.erase(iterator);
     - v.erase(v.begin());
     - iterator 위치의 인자를 삭제
-v.erase(start,end);
+* v.erase(start,end);
     - v.erase(v.begin()+3, v.begin()+5);
     - (start,end) 범위의 인자를 삭제
-v.empty()
+* v.empty()
     - vector의 size가 0이면 true
     - vector의 size가 0이 아니면 false
     - capacity 와 무관함
