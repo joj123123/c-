@@ -75,7 +75,7 @@ for (vector<int>::iterator iter = v.begin(); iter != v.end(); ++iter) {
 * v.reserve(n);
     - n개의 원소를 저장할 메모리를 할당함
 ## v.reserve 를 사용할 때와 아닐때의 차이
-v.push_back(N) 을 사용할 때는 push_back()함수를 사용할 때마다 메모리가 재할당됨.
+v.push_back(N) 을 사용할 때는 push_back()함수를 사용할 때마다 메모리가 재할당됨.<br>
 따라서 reserve를 해두면 재할당 횟수가 줄어들게 되고
 reserve를 하지 않고 push_back()함수를 쓸때보다 약 1.7배 빨라지게 됨(1억개의 배열 기준)
 * v.resize(n);
