@@ -44,6 +44,7 @@
 * v.at(idx);
     - idx번째 원소를 참조함 
     - v[idx] 보다 속도는 느리지만 범위를 점검함
+    - 범위를 점검한 후 존재하지 않는 범위에 접근하면 out of range 오류를 throwing 
 
 * v.front();
     - 첫번째 원소를 참조
@@ -69,5 +70,51 @@ for (vector<int>::iterator iter = v.begin(); iter != v.end(); ++iter) {
 		cout << *iter;
 	}
 ~~~
+* v.reserve(n);
+    - n개의 원소를 저장할 메모리를 할당함
+## v.reserve 를 사용할 때와 아닐때의 차이
+v.push_back(N) 을 사용할 때는 push_back()함수를 사용할 때마다 메모리가 재할당됨.
+따라서 reserve를 해두면 재할당 횟수가 줄어들게 되고 그냥 push_back()함수를 쓸때보다 약 1.7배 빨라지게 됨(1억개의 배열 기준)
+* v.resize(n);
+    - situation 1 (n>v.size()) 크기를 n으로 변경, 기존의 원소들은 변하지 않음
+    - situation 2 (n<v.size()) 크기를 n으로 변경, default값인 0으로 초기화 함
+* v.resize(n,3);
+    - situation 1 (n>v.size()) 크기를 n으로 변경, 기존의 원소들은 변하지 않음
+    - situation 2 (n<v.size()) 크기를 n으로 변경, default값인 3으로 초기화 함
+* v.size();
+    - 원소의 개수를 반환함
+* v.capacity();
+    - 할당된 공간의 크기를 반환함
+    - 공간할당의 기준은 점점 커짐
+## capacity 와 size의 차이
+* capacity는 메모리의 크기(해당 data type이 들어갈 수 있는 갯수)
+* size는 메모리 안의 iterator의 
+원소의 개수가 증가할 때 새로운 메모리를 할당하게 된다.
+그렇게 원소의 개수가 증가할 때마다 메모리를 새로 할당하게 되면 비효율이 발생하기 떄문에
+메모리를 새로 할당할 떄에는 기존 메모리 * 2 의 크기로 capacity가 증가하게 됨
+
+v.insert(iterator,M,num);
+    - v.insert(v.begin()+1, 3, 4);
+    - iterator 위치에 M개의 num값을 삽입함
+    - 삽입한 곳의 iterator을 반환함
+    - 벡터는 삽입을 할 경우 
+v.erase(iterator);
+    - v.erase(v.begin());
+    - iterator 위치의 인자를 삭제
+v.erase(start,end);
+    - v.erase(v.begin()+3, v.begin()+5);
+    - (start,end) 범위의 인자를 삭제
+v.empty()
+    - vector의 size가 0이면 true
+    - vector의 size가 0이 아니면 false
+    - capacity 와 무관함
+    
+    
+
+
+
+
+
+
 
 
