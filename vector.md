@@ -15,18 +15,18 @@
     - ex) vector<int> v(5,2); 
     - size 만큼의 배열에 init num 을 넣어줌
     
-* 1.5 vector<int> v2(v1);
+* vector<int> v2(v1);
     - v2는 v1을 복사해서 생성됨
     
 # 2. 2 dimension constructor
-* 2.1 vector<vector<data type>> varname;
+* vector<vector<data type>> varname;
     - ex) vector<vector<int>> v;
 
-* 2.2 vector<vector<datatype>> v(N,vector<datatype>(M,0));
+* vector<vector<datatype>> v(N,vector<datatype>(M,0));
     - ex) vector<vector<int>> v(6,vector<int>(5,0));
     - N개의 벡터를 할당하고 그 안에 M개의 요소를 0으로 초기화 함.
 
-* 2.3 vector<vector<datatype>> v({
+* vector<vector<datatype>> v({
     vector<datatype> ({iterator}),
     vector<datatype> ({iterator})
     });
@@ -37,13 +37,28 @@
         - 각각의 iterator 로 이루어진 2차원배열을생성
 
 # 3. member function
-* 3.1 v.assign(N,init num);
+* v.assign(N,init num);
     - ex) v.assing(5,2);
     - init num의 값으로 N개의 원소 할당
 
-* 3.2 v.at(idx);
+* v.at(idx);
     - idx번째 원소를 참조함 
     - v[idx] 보다 속도는 느리지만 범위를 점검함
 
-## 3.3 v.front
+* v.front();
+    - 첫번째 원소를 참조
+* v.back();
+    - 마지막 원소를 참조
+* v.front();
+    - 첫번째 원소를 참조
+* v.clear();
+    - 모든 원소를 제거
+    - 원소만 제거하고 메모리는 남아있음.
+    - size만 줄고 capacity 는 그대로
+* v.push_back(N);
+    - 마지막 원소 뒤에 원소 N 을 삽입
+* v.pop_back();
+    - 마지막 원소를 제거
+* v.begin();
+    - 첫번째 원소를 가리킴
 
