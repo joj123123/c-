@@ -4,8 +4,7 @@
 #### varname 을 가진 data type의 vector 를 만들어줌
     
 ## 1.2 vector<data type> varname({iterator});
-### ex) vector<data type> varname({1,2,3});
-#### 
+ex) vector<data type> varname({1,2,3});
 
 ## 1.3 vector<data type> varname(size);
 ### ex) vector<int> v(5);
