@@ -16,3 +16,13 @@ cout << upper_bound(arr,arr+10,7)-arr;
 ~~~
 result = 7<br>
 upper_bound 는 value 값 보다 큰 원소중 가장 앞의 인덱스를 반환해줌.
+
+# fill_n
+fill_n(iterator first,size n,const value)
+~~~cpp
+int arr[10];
+fill_n(arr,10,1);
+cout << arr[5];
+~~~
+result = 1<br>
+fill_n 은 first 부터 first + n 까지의 배열 주소에 value 값을 넣어줌
