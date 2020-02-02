@@ -35,4 +35,6 @@ remove(v.begin(),v.end(),1);
 cout << v[0];
 ~~~
 result = 2<br>
-remove 는 first 부터 end 까지의 배열에서 value 값을 없애줌
+remove 는 first 부터 end 까지의 배열에서 value 값을 제거함<br>
+남아있는 배열은 제거된 만큼 원소를 앞으로 재배정함(size 유지)<br>
+ex 에서 남아있는 벡터는 {2,3,3}
