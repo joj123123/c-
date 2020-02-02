@@ -26,3 +26,13 @@ cout << arr[5];
 ~~~
 result = 1<br>
 fill_n 은 first 부터 first + n 까지의 배열 주소에 value 값을 넣어줌
+
+# remove
+remove(iterator first, iterator end, value)
+~~~cpp
+vector v({1,2,3});
+remove(v.begin(),v.end(),1);
+cout << v[0];
+~~~
+result = 2<br>
+remove 는 first 부터 end 까지의 배열에서 value 값을 없애줌
