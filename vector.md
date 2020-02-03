@@ -19,17 +19,21 @@
     - v2는 v1을 복사해서 생성됨
     
 # 2. 2 dimension constructor
-* vector<vector<data type>> varname;
+~~~cpp
+vector<vector<data type>> varname;
     - ex) vector<vector<int>> v;
-
-* vector<vector<datatype>> v(N,vector<datatype>(M,0));
+~~~
+~~~cpp
+vector<vector<datatype>> v(N,vector<datatype>(M,0));
     - ex) vector<vector<int>> v(6,vector<int>(5,0));
     - N개의 벡터를 할당하고 그 안에 M개의 요소를 0으로 초기화 함.
-
-* vector<vector<datatype>> v({
+~~~
+~~~cpp
+vector<vector<datatype>> v({
     vector<datatype> ({iterator}),
     vector<datatype> ({iterator})
     });
+~~~
 	- 각각의 iterator 로 이루어진 2차원배열을생성
 ~~~cpp
         vector<vector<int> > arr({
